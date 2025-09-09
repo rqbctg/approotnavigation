@@ -22,28 +22,53 @@ A Swift Package for managing app root navigation flow in UIKit-based iOS applica
 
 - Xcode 12 or higher
 - Swift 5.3 or higher
-- iOS 12.0 or higher
+- iOS 13.0 or higher
 
 
 ### 📥 Using Swift Package Manager
 
-To integrate `AppRootNavigation` into your project using Swift Package Manager:
+### Xcode (Recommended)
 
-1. Open your Xcode project.
-2. Navigate to **File** > **Swift Packages** > **Add Package Dependency**.
-3. Paste the following repository URL into the "Package Repository URL" field:
-   
+1. Open your project in Xcode.  
+2. Go to **File → Add Packages…**  
+3. Enter the repo URL:
+
    ```
-   https://github.com/rqbctg/approotnavigation.git
+   https://github.com/rqbctg/convertible.git
    ```
-   
-5. Choose the version or branch you wish to integrate.
+
+4. Choose **Dependency Rule** → “Up to Next Major” from `1.0.0`.  
+5. Select the target you want to add the package to.
+
+
+---
+
+### Swift Package Manager (`Package.swift`)
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/rqbctg/approotnavigation.git", from: "1.0.0")
+],
+targets: [
+    .target(
+        name: "MyApp",
+        dependencies: [
+            .product(name: "AppRootNavigation", package: "AppRootNavigation")
+        ]
+    )
+]
+```
+
+---
 
 
 ### 🛠️ Manual Installation
 
 1. Download the latest release of the package.
 2. Drag and drop the source files into your Xcode project.
+
+---
+
 
 
 ## 🚦 Usage
