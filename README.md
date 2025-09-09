@@ -1,40 +1,55 @@
 
-# AppRootNavigation
+
+# 🚀 AppRootNavigation
+
+[![Swift](https://img.shields.io/badge/Swift-5.9-orange.svg)](https://swift.org)
+[![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20iPadOS-blue.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
 
 A Swift Package for managing app root navigation flow in UIKit-based iOS applications.
 
-## Overview
+---
+
+## 📝 Overview
 
 `AppRootNavigation` simplifies managing root navigation within UIKit-based applications. It allows for easy flow management, enabling the app to navigate between root views (such as onboarding screens and home screens) with minimal setup.
 
-## Installation
 
-### Requirements
+## 📦 Installation
+
+
+### ⚙️ Requirements
 
 - Xcode 12 or higher
 - Swift 5.3 or higher
 - iOS 12.0 or higher
 
-### Using Swift Package Manager
+
+### 📥 Using Swift Package Manager
 
 To integrate `AppRootNavigation` into your project using Swift Package Manager:
 
 1. Open your Xcode project.
 2. Navigate to **File** > **Swift Packages** > **Add Package Dependency**.
 3. Paste the following repository URL into the "Package Repository URL" field:
+   
    ```
    https://github.com/rqbctg/approotnavigation.git
    ```
-4. Choose the version or branch you wish to integrate.
+   
+5. Choose the version or branch you wish to integrate.
 
-### Manual Installation
+
+### 🛠️ Manual Installation
 
 1. Download the latest release of the package.
 2. Drag and drop the source files into your Xcode project.
 
-## Usage
 
-### Importing the Package
+## 🚦 Usage
+
+
+### 📚 Importing the Package
 
 Once added, import the package into your Swift files:
 
@@ -42,7 +57,8 @@ Once added, import the package into your Swift files:
 import AppRootNavigation
 ```
 
-### Example Usage
+
+### 💡 Example Usage
 
 To set up root navigation with conditional flow (e.g., Onboarding screen vs. Home screen) based on user interaction, you can follow this approach:
 
@@ -102,7 +118,8 @@ final class DefaultAppRootState: AppRootState {
 }
 ```
 
-### SceneDelegate Integration
+
+### 🔗 SceneDelegate Integration
 
 In your `SceneDelegate`, use the `DefaultAppRootState` to manage the navigation between root views. The following code demonstrates how to set up the root view controller and handle navigation based on the current root flow:
 
@@ -137,7 +154,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 In this example, `DefaultAppRootState.shared.currentAppRoot.contentController` determines the initial root view controller (either `OnBoardingViewController` or `HomeViewController`). The navigation controller (`AppRootNavigationController`) is used to wrap the root view controller and manage navigation.
 
-## Documentation
+
+## 📖 Documentation
 
 You can find the full documentation and more usage examples on Medium :
 
@@ -148,7 +166,8 @@ Part 2:
 https://medium.com/@rqb.ctg/deep-dive-building-a-scalable-app-root-flow-system-in-ios-with-swift-ba236862e615
 
 
-## Contributing
+
+## 🤝 Contributing
 
 1. Fork this repository.
 2. Create a new branch for each feature or bug fix.
@@ -156,10 +175,12 @@ https://medium.com/@rqb.ctg/deep-dive-building-a-scalable-app-root-flow-system-i
 4. Push to your fork.
 5. Create a Pull Request with a detailed description.
 
-## License
+
+## 🪪 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+
+## 📬 Contact
 
 For issues or feature requests, please open an issue on [GitHub Issues](https://github.com/rqbctg/approotnavigation/issues).
