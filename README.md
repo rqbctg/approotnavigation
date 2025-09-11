@@ -34,7 +34,7 @@ A Swift Package for managing app root navigation flow in UIKit-based iOS applica
 3. Enter the repo URL:
 
    ```
-   https://github.com/rqbctg/convertible.git
+   https://github.com/rqbctg/approotnavigation.git
    ```
 
 4. Choose **Dependency Rule** → “Up to Next Major” from `1.0.0`.  
