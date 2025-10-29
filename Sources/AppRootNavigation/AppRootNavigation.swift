@@ -12,7 +12,7 @@ final public class AppRootNavigationController: UINavigationController {
     private var cancellables = Set<AnyCancellable>()
     
     // A static PassthroughSubject to publish app root flow changes
-    static let changeAppRoot = PassthroughSubject<AppRootFlow, Never>()
+    static public let changeAppRoot = PassthroughSubject<AppRootFlow, Never>()
 
     // The root changer responsible for changing the root view controller
     private let rootChanger: RootChanging
