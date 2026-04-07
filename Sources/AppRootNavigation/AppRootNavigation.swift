@@ -17,13 +17,18 @@ final public class AppRootNavigationController: UINavigationController {
     // The root changer responsible for changing the root view controller
     private let rootChanger: RootChanging
 
+    /// navbar hidden state
+    private let navbarHidden: Bool 
+
     /// Initializer to set the root changer and initial view controller.
     /// - Parameters:
     ///   - rootChanger: An object conforming to `RootChanging` to change root.
     ///   - rootViewController: The initial view controller for the navigation controller.
     public init(
-        rootController: UIViewController
+        rootController: UIViewController,
+        isNavBarHidden: Bool = false
     ) {
+        self.navbarHidden = isNavBarHidden
         self.rootChanger = AppRootChanger()
         // Calls the parent class initializer with the provided root view controller.
         super.init(rootViewController: rootController)
@@ -58,6 +63,6 @@ final public class AppRootNavigationController: UINavigationController {
     /// It hides the navigation bar when the view is displayed.
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setNavigationBarHidden(true, animated: animated) // Hides navigation bar.
+        setNavigationBarHidden(navbarHidden, animated: animated) // Hides navigation bar.
     }
 }
