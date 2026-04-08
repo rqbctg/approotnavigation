@@ -48,7 +48,7 @@ final public class AppRootNavigationController: UINavigationController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNavigationBarHidden(navbarHidden, animated: animated) // Hides navigation bar.
+        setNavigationBarHidden(navbarHidden, animated: false) // Hides navigation bar.
         
         // Subscribe to the static `changeAppRoot` subject to listen for root changes.
         // The subscription ensures that any emitted root flow changes will trigger the root changing process.
