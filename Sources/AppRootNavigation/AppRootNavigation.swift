@@ -39,6 +39,7 @@ final public class AppRootNavigationController: UINavigationController {
     required init?(coder aDecoder: NSCoder) {
         // Initializes the rootChanger with a default instance
         self.rootChanger = AppRootChanger()
+        self.navbarHidden = false
         super.init(coder: aDecoder)
     }
 
